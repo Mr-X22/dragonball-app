@@ -7,12 +7,14 @@ const detailImage = document.getElementById("detail-image");
 const detailName = document.getElementById("detail-name");
 const detailKi = document.getElementById("detail-ki");
 const detailDescription = document.getElementById("detail-description");
+const detailClass = document.getElementById("detail-class");
+const detailStars = document.getElementById("detail-stars");
 
 let currentPage = 1;
 let totalPages = 1;
 
 async function fetchCharacters(page = 1) {
-  const res = await fetch(`https://dragonball-api.com/api/characters?page=${page}&limit=10`);
+  const res = await fetch(`https://dragonball-api.com/api/characters?page=${page}&limit=18`);
   const data = await res.json();
 
   charactersDiv.innerHTML = "";
@@ -22,7 +24,6 @@ async function fetchCharacters(page = 1) {
     card.innerHTML = `
       <img src="${c.image}" alt="${c.name}">
       <h2>${c.name}</h2>
-      <p>KI: ${c.ki}</p>
     `;
     card.onclick = () => showDetail(c);
     charactersDiv.appendChild(card);
@@ -55,6 +56,10 @@ function showDetail(character) {
   detailName.textContent = character.name;
   detailKi.textContent = character.ki;
   detailDescription.textContent = character.description;
+
+  // Ejemplo de rareza y clase (puedes adaptarlo según API o personaje)
+  detailClass.textContent = "Clase: Guerrero Legendario";
+  detailStars.textContent = "★★★★★";
 }
 
 function goBack() {
