@@ -12,7 +12,8 @@ let currentPage = 1;
 let totalPages = 1;
 
 async function fetchCharacters(page = 1) {
-  const res = await fetch(`https://dragonball-api.com/api/characters?page=${page}&limit=18`);
+  // Ajuste final: 10 personajes por página
+  const res = await fetch(`https://dragonball-api.com/api/characters?page=${page}&limit=10`);
   const data = await res.json();
 
   charactersDiv.innerHTML = "";
@@ -60,9 +61,6 @@ function goBack() {
   detailScreen.style.display = "none";
   mainScreen.style.display = "block";
 }
-
-// Inicializar
-fetchCharacters();
 
 // Inicializar
 fetchCharacters();
