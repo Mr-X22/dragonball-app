@@ -71,24 +71,9 @@ h1 {
 .left img {
   width: 100%;
   max-width: 300px;
-  height: auto;
+  height: 400px;         /* altura fija para uniformidad en detalle */
   object-fit: contain;
   filter: drop-shadow(0 0 15px yellow);
-}
-
-.left h2 {
-  margin-top: 10px;
-  color: #ffcc00;
-}
-
-#detail-class {
-  color: #fff;
-  font-style: italic;
-}
-
-#detail-stars {
-  color: gold;
-  font-size: 20px;
 }
 
 .right {
@@ -99,8 +84,16 @@ h1 {
   overflow-y: auto;
   background: rgba(255,255,255,0.1);
   border-radius: 8px;
-  font-size: 16px; /* texto más grande */
+  font-size: 16px;
   line-height: 1.5;
+}
+
+.right h2 {
+  margin-bottom: 15px;
+  font-size: 28px;       /* más grande */
+  text-align: center;    /* centrado */
+  color: #ffcc00;        /* dorado para destacar */
+  text-shadow: 2px 2px 4px #000;
 }
 
 .right strong {
@@ -114,8 +107,13 @@ h1 {
   padding: 12px 18px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* más grande */
+  font-size: 16px;
 }
+
+.back-btn:hover {
+  background: #3399ff; /* efecto hover */
+}
+
 
 .pagination {
   margin-top: 20px;
