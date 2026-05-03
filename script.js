@@ -7,8 +7,6 @@ const detailImage = document.getElementById("detail-image");
 const detailName = document.getElementById("detail-name");
 const detailKi = document.getElementById("detail-ki");
 const detailDescription = document.getElementById("detail-description");
-const detailClass = document.getElementById("detail-class");
-const detailStars = document.getElementById("detail-stars");
 
 let currentPage = 1;
 let totalPages = 1;
@@ -56,16 +54,15 @@ function showDetail(character) {
   detailName.textContent = character.name;
   detailKi.textContent = character.ki;
   detailDescription.textContent = character.description;
-
-  // Ejemplo de rareza y clase (puedes adaptarlo según API o personaje)
-  detailClass.textContent = "Clase: Guerrero Legendario";
-  detailStars.textContent = "★★★★★";
 }
 
 function goBack() {
   detailScreen.style.display = "none";
   mainScreen.style.display = "block";
 }
+
+// Inicializar
+fetchCharacters();
 
 // Inicializar
 fetchCharacters();
