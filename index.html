@@ -2,26 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dragon Ball Characters - Demo</title>
+  <title>Dragon Ball Characters</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Pantalla principal -->
   <div id="main-screen">
-    <h1>Dragon Ball Characters (Demo)</h1>
-    <div id="characters" class="grid">
-      <!-- Tarjetas de prueba -->
-      <div class="card" onclick="showDetail('Goku')">
-        <img src="https://via.placeholder.com/150" alt="Goku">
-        <h2>Goku</h2>
-        <p>KI: ???</p>
-      </div>
-      <div class="card" onclick="showDetail('Vegeta')">
-        <img src="https://via.placeholder.com/150" alt="Vegeta">
-        <h2>Vegeta</h2>
-        <p>KI: ???</p>
-      </div>
-    </div>
+    <h1>Dragon Ball Characters</h1>
+    <div id="characters" class="grid"></div>
+    <div id="pagination" class="pagination"></div>
   </div>
 
   <!-- Pantalla detalle -->
@@ -29,12 +18,12 @@
     <button onclick="goBack()" class="back-btn">← Regresar</button>
     <div class="detail-container">
       <div class="left">
-        <img id="detail-image" src="https://via.placeholder.com/250" alt="">
-        <h2 id="detail-name">Nombre</h2>
+        <img id="detail-image" src="" alt="">
+        <h2 id="detail-name"></h2>
       </div>
       <div class="right">
-        <p><strong>KI:</strong> <span id="detail-ki">???</span></p>
-        <p id="detail-description">Descripción del personaje aparecerá aquí...</p>
+        <p><strong>KI:</strong> <span id="detail-ki"></span></p>
+        <p id="detail-description"></p>
       </div>
     </div>
   </div>
