@@ -1,15 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background: #111;
+  background: url("fondo-dragonball.png") no-repeat center center fixed; 
+  background-size: cover; /* La imagen se adapta a toda la pantalla */
   color: #fff;
   margin: 0;
   padding: 20px;
   text-align: center;
 }
 
+
 h1 {
-  color: #ffcc00;
-  text-shadow: 2px 2px 4px #000;
+  color: #000;              /* Negro sólido */
+  text-shadow: 2px 2px 4px #fff; /* Opcional: sombra blanca para contraste */
 }
 
 .roster-grid {
