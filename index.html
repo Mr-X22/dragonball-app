@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragon Ball Characters - Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla principal -->
+  <div id="main-screen">
+    <h1>Dragon Ball Characters (Demo)</h1>
+    <div id="characters" class="grid">
+      <!-- Tarjetas de prueba -->
+      <div class="card" onclick="showDetail('Goku')">
+        <img src="https://via.placeholder.com/150" alt="Goku">
+        <h2>Goku</h2>
+        <p>KI: ???</p>
+      </div>
+      <div class="card" onclick="showDetail('Vegeta')">
+        <img src="https://via.placeholder.com/150" alt="Vegeta">
+        <h2>Vegeta</h2>
+        <p>KI: ???</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla detalle -->
+  <div id="detail-screen" style="display:none;">
+    <button onclick="goBack()" class="back-btn">← Regresar</button>
+    <div class="detail-container">
+      <div class="left">
+        <img id="detail-image" src="https://via.placeholder.com/250" alt="">
+        <h2 id="detail-name">Nombre</h2>
+      </div>
+      <div class="right">
+        <p><strong>KI:</strong> <span id="detail-ki">???</span></p>
+        <p id="detail-description">Descripción del personaje aparecerá aquí...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
